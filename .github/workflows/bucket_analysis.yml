@@ -1,0 +1,22 @@
+name: RSI Bucket Analizi
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  run-bucket-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repoyu çek
+        uses: actions/checkout@v4
+
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Bağımlılıkları kur
+        run: pip install requests
+
+      - name: Bucket analizini çalıştır
+        run: python bucket_analysis.py
