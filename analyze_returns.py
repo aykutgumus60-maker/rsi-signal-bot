@@ -177,6 +177,11 @@ def summarize(symbol, signals):
         print(f"  En iyi sonuç: %{best[key]} ({best['time_str']}, giriş RSI: {best['rsi_5m']})")
         print(f"  En kötü sonuç: %{worst[key]} ({worst['time_str']}, giriş RSI: {worst['rsi_5m']})")
 
+        wins_sorted = sorted(wins, key=lambda s: s["time"])
+        print(f"\n  >>> {label} YÜKSELEN (kazanan) sinyallerin tarih/RSI listesi ({len(wins_sorted)} adet) <<<")
+        for s in wins_sorted:
+            print(f"    {s['time_str']} | Giriş 5dk RSI14: {s['rsi_5m']} | Getiri: %{s[key]}")
+
 
 def main():
     for symbol in SYMBOLS:
