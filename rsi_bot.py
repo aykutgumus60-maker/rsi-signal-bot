@@ -39,7 +39,7 @@ WINDOW_30M_MINUTES = 40
 
 SIGNAL_COOLDOWN_MINUTES = 60  # aynı sembol için tekrar sinyal göndermeden önce bekleme
 
-BINANCE_KLINES_URL = "https://api.binance.com/api/v3/klines"
+BINANCE_KLINES_URL = BINANCE_KLINES_URL = "https://data-api.binance.vision/api/v3/klines"
 STATE_FILE = "state.json"
 
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
